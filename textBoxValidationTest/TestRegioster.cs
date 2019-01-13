@@ -21,11 +21,14 @@ namespace textBoxValidationTest
         public TestRegioster()
         {
             InitializeComponent();
+            this.BackColor = Color.Lime;
+            this.TransparencyKey = Color.Lime;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
+            TestRegioster t =new TestRegioster();
             Form1 f =new Form1();
             f.Show();
         }

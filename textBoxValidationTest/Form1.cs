@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
+using Microsoft.SqlServer.Server;
+using static ClassLibrary1.DataAccess;
 
 namespace textBoxValidationTest
 {
@@ -18,6 +20,8 @@ namespace textBoxValidationTest
         {
             InitializeComponent();
             txtType.SelectedIndex = 0;
+            this.BackColor = Color.Black;
+            this.TransparencyKey = Color.Black;
         }
 
         private void btnNotify_Click(object sender, EventArgs e)
@@ -65,7 +69,7 @@ namespace textBoxValidationTest
         {
             if (txtPassword.Text == "")
             {
-                MessageBox.Show("You Must Provide your Age");
+                MessageBox.Show("You Must Provide your Password");
                 txtPassword.Select();
                 //textBox2.ForeColor = Color.Black;
                 AgeHint.Visible = true;
@@ -94,19 +98,58 @@ namespace textBoxValidationTest
             Application.Exit();
         }
 
-        private void btnTestLogin_Click(object sender, EventArgs e)
-        {
-            TestRegioster t = new TestRegioster();
-            this.Hide();
-            t.Show();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) 
         {
             db = new DBEntities();
             List<tblTest> l = db.tblTests.ToList();
             comboBox1.DataSource = l;
             comboBox1.DisplayMember = "UserName";
+            
+        }
+        public static Timer t;
+
+        public void T_Tick(object sender, EventArgs e)
+        {
+            t.Stop();
+            this.Hide();
+            exit();
+        }
+
+        private void lblClose_Click(object sender, EventArgs e)
+        {
+            t = new Timer();
+            t.Interval = 2000;
+            t.Start();
+            Spash_Scereen s = new Spash_Scereen();
+            s.Show();
+            t.Tick += T_Tick;
+        }
+
+        void exit()
+        {
+            Application.Exit();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            TestRegioster t = new TestRegioster();
+            
+            this.Hide();
+            t.Show();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Form1 f= new Form1();
+           // DataAccess(f);
+            
+            if (true)
+            {
+                ScreenCapture s = new ScreenCapture();
+                this.Hide();
+                s.Show();
+            }
         }
     }
 }

@@ -1,7 +1,6 @@
 c:\users\porosh prince\documents\visual studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\bin\Debug\textBoxValidationTest.exe.config
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\bin\Debug\textBoxValidationTest.exe
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\bin\Debug\textBoxValidationTest.pdb
-C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\obj\Debug\textBoxValidationTest.csprojResolveAssemblyReference.cache
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\obj\Debug\textBoxValidationTest.Form1.resources
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\obj\Debug\textBoxValidationTest.Properties.Resources.resources
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\obj\Debug\textBoxValidationTest.csproj.GenerateResource.Cache
@@ -16,3 +15,4 @@ C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTe
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\bin\Debug\EntityFramework.xml
 C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Porosh Prince\Documents\Visual Studio 2015\Projects\textBoxValidationTest\textBoxValidationTest\obj\Debug\textBoxValidationTest.csprojResolveAssemblyReference.cache

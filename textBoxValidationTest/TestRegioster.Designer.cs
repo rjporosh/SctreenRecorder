@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picAvailable = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.PasswordHint = new System.Windows.Forms.Label();
+            this.UserTypeHint = new System.Windows.Forms.Label();
+            this.UserNameHint = new System.Windows.Forms.Label();
+            this.FullNameHint = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
@@ -38,12 +44,6 @@
             this.txtType = new System.Windows.Forms.ComboBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.FullNameHint = new System.Windows.Forms.Label();
-            this.UserNameHint = new System.Windows.Forms.Label();
-            this.PasswordHint = new System.Windows.Forms.Label();
-            this.UserTypeHint = new System.Windows.Forms.Label();
-            this.picAvailable = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvailable)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Register";
             // 
+            // picAvailable
+            // 
+            this.picAvailable.Image = global::textBoxValidationTest.Properties.Resources.X;
+            this.picAvailable.Location = new System.Drawing.Point(286, 79);
+            this.picAvailable.Name = "picAvailable";
+            this.picAvailable.Size = new System.Drawing.Size(38, 18);
+            this.picAvailable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvailable.TabIndex = 4;
+            this.picAvailable.TabStop = false;
+            this.picAvailable.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(40, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "User Type :";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -93,6 +114,58 @@
             this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "User Name :";
+            // 
+            // PasswordHint
+            // 
+            this.PasswordHint.AutoSize = true;
+            this.PasswordHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordHint.ForeColor = System.Drawing.Color.DarkRed;
+            this.PasswordHint.Location = new System.Drawing.Point(327, 122);
+            this.PasswordHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordHint.Name = "PasswordHint";
+            this.PasswordHint.Size = new System.Drawing.Size(157, 16);
+            this.PasswordHint.TabIndex = 3;
+            this.PasswordHint.Text = "* Enter Desired Password Here";
+            this.PasswordHint.Visible = false;
+            // 
+            // UserTypeHint
+            // 
+            this.UserTypeHint.AutoSize = true;
+            this.UserTypeHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserTypeHint.ForeColor = System.Drawing.Color.DarkRed;
+            this.UserTypeHint.Location = new System.Drawing.Point(288, 165);
+            this.UserTypeHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserTypeHint.Name = "UserTypeHint";
+            this.UserTypeHint.Size = new System.Drawing.Size(129, 16);
+            this.UserTypeHint.TabIndex = 3;
+            this.UserTypeHint.Text = "* Select Your Type Here";
+            this.UserTypeHint.Visible = false;
+            // 
+            // UserNameHint
+            // 
+            this.UserNameHint.AutoSize = true;
+            this.UserNameHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameHint.ForeColor = System.Drawing.Color.DarkRed;
+            this.UserNameHint.Location = new System.Drawing.Point(327, 79);
+            this.UserNameHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserNameHint.Name = "UserNameHint";
+            this.UserNameHint.Size = new System.Drawing.Size(130, 16);
+            this.UserNameHint.TabIndex = 3;
+            this.UserNameHint.Text = "* Enter User Name Here";
+            this.UserNameHint.Visible = false;
+            // 
+            // FullNameHint
+            // 
+            this.FullNameHint.AutoSize = true;
+            this.FullNameHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameHint.ForeColor = System.Drawing.Color.DarkRed;
+            this.FullNameHint.Location = new System.Drawing.Point(327, 38);
+            this.FullNameHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FullNameHint.Name = "FullNameHint";
+            this.FullNameHint.Size = new System.Drawing.Size(125, 16);
+            this.FullNameHint.TabIndex = 3;
+            this.FullNameHint.Text = "* Enter Full Name Here";
+            this.FullNameHint.Visible = false;
             // 
             // label1
             // 
@@ -169,79 +242,6 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 165);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "User Type :";
-            // 
-            // FullNameHint
-            // 
-            this.FullNameHint.AutoSize = true;
-            this.FullNameHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FullNameHint.ForeColor = System.Drawing.Color.DarkRed;
-            this.FullNameHint.Location = new System.Drawing.Point(327, 38);
-            this.FullNameHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.FullNameHint.Name = "FullNameHint";
-            this.FullNameHint.Size = new System.Drawing.Size(125, 16);
-            this.FullNameHint.TabIndex = 3;
-            this.FullNameHint.Text = "* Enter Full Name Here";
-            this.FullNameHint.Visible = false;
-            // 
-            // UserNameHint
-            // 
-            this.UserNameHint.AutoSize = true;
-            this.UserNameHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameHint.ForeColor = System.Drawing.Color.DarkRed;
-            this.UserNameHint.Location = new System.Drawing.Point(327, 79);
-            this.UserNameHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.UserNameHint.Name = "UserNameHint";
-            this.UserNameHint.Size = new System.Drawing.Size(130, 16);
-            this.UserNameHint.TabIndex = 3;
-            this.UserNameHint.Text = "* Enter User Name Here";
-            this.UserNameHint.Visible = false;
-            // 
-            // PasswordHint
-            // 
-            this.PasswordHint.AutoSize = true;
-            this.PasswordHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordHint.ForeColor = System.Drawing.Color.DarkRed;
-            this.PasswordHint.Location = new System.Drawing.Point(327, 122);
-            this.PasswordHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PasswordHint.Name = "PasswordHint";
-            this.PasswordHint.Size = new System.Drawing.Size(157, 16);
-            this.PasswordHint.TabIndex = 3;
-            this.PasswordHint.Text = "* Enter Desired Password Here";
-            this.PasswordHint.Visible = false;
-            // 
-            // UserTypeHint
-            // 
-            this.UserTypeHint.AutoSize = true;
-            this.UserTypeHint.Font = new System.Drawing.Font("High Tower Text", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserTypeHint.ForeColor = System.Drawing.Color.DarkRed;
-            this.UserTypeHint.Location = new System.Drawing.Point(288, 165);
-            this.UserTypeHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.UserTypeHint.Name = "UserTypeHint";
-            this.UserTypeHint.Size = new System.Drawing.Size(129, 16);
-            this.UserTypeHint.TabIndex = 3;
-            this.UserTypeHint.Text = "* Select Your Type Here";
-            this.UserTypeHint.Visible = false;
-            // 
-            // picAvailable
-            // 
-            this.picAvailable.Image = global::textBoxValidationTest.Properties.Resources.X;
-            this.picAvailable.Location = new System.Drawing.Point(286, 79);
-            this.picAvailable.Name = "picAvailable";
-            this.picAvailable.Size = new System.Drawing.Size(38, 18);
-            this.picAvailable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picAvailable.TabIndex = 4;
-            this.picAvailable.TabStop = false;
-            this.picAvailable.Visible = false;
-            // 
             // TestRegioster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -269,15 +269,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.ComboBox txtType;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label PasswordHint;
         private System.Windows.Forms.Label UserTypeHint;
         private System.Windows.Forms.Label UserNameHint;
         private System.Windows.Forms.Label FullNameHint;
         private System.Windows.Forms.PictureBox picAvailable;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtUserName;
+        public System.Windows.Forms.TextBox txtFullName;
+        public System.Windows.Forms.ComboBox txtType;
     }
 }

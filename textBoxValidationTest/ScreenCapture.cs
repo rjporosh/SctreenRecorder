@@ -18,6 +18,8 @@ namespace textBoxValidationTest
         public ScreenCapture()
         {
             InitializeComponent();
+            this.BackColor = Color.Lime;
+            this.TransparencyKey = Color.Lime;
         }
 
         private void btnScreenShot_Click(object sender, EventArgs e)

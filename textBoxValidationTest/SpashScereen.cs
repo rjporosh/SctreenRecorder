@@ -15,6 +15,8 @@ namespace textBoxValidationTest
         public Spash_Scereen()
         {
             InitializeComponent();
+            this.BackColor = Color.Lime;
+            this.TransparencyKey = Color.Lime;
         }
 
        public static Timer t;
