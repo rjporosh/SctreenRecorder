@@ -5,13 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textBoxValidationTest", "textBoxValidationTest\textBoxValidationTest.csproj", "{59AA8506-584A-4841-B13B-A418772E885A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{326F206D-F579-48B4-B081-745CC9025690}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "ClassLibrary1\DAL.csproj", "{326F206D-F579-48B4-B081-745CC9025690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{B682F812-78C4-48FD-AAEE-0E6E93D8A088}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "DataAccessLayer\BAL.csproj", "{B682F812-78C4-48FD-AAEE-0E6E93D8A088}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectAsParam", "ObjectAsParam\ObjectAsParam.csproj", "{4585BE94-97D0-4AC0-A1B1-962AFCB09C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkAccessLayer", "LinkAccessLayer\LinkAccessLayer.csproj", "{BC90D5A9-3F67-4ECD-A183-9386D28E6AD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEL", "LinkAccessLayer\BEL.csproj", "{BC90D5A9-3F67-4ECD-A183-9386D28E6AD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

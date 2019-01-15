@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
+using DataAccessLayer;
+using LinkAccessLayer;
 using Microsoft.SqlServer.Server;
-using static ClassLibrary1.DataAccess;
+using static LinkAccessLayer.Information;
 
 namespace textBoxValidationTest
 {
     public partial class Form1 : Form
     {
         private DBEntities db;
+        public Information info = new Information();
+        public Operations opr = new Operations();
         public Form1()
         {
             InitializeComponent();
@@ -141,15 +145,30 @@ namespace textBoxValidationTest
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form1 f= new Form1();
-           // DataAccess(f);
             
-            if (true)
+           //// DataAccess(f);
+            
+           // if (true)
+           // {
+           //     ScreenCapture s = new ScreenCapture();
+           //     this.Hide();
+           //     s.Show();
+           // }
+            info.UserName = txtName.Text;
+            info.Password = txtPassword.Text;
+            info.Type = txtType.Text;
+            if(opr.login(info).Rows.Count>0)
             {
-                ScreenCapture s = new ScreenCapture();
                 this.Hide();
+                ScreenCapture s =new ScreenCapture();
+                MessageBox.Show("Login Success");
                 s.Show();
             }
+            else
+            {
+                MessageBox.Show("Login Failed.Register First.");
+            }
+
         }
     }
 }

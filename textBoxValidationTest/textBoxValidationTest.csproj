@@ -133,9 +133,17 @@
     <None Include="Resources\X.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+    <ProjectReference Include="..\ClassLibrary1\DAL.csproj">
       <Project>{326f206d-f579-48b4-b081-745cc9025690}</Project>
-      <Name>ClassLibrary1</Name>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\BAL.csproj">
+      <Project>{b682f812-78c4-48fd-aaee-0e6e93d8a088}</Project>
+      <Name>BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LinkAccessLayer\BEL.csproj">
+      <Project>{bc90d5a9-3f67-4ecd-a183-9386d28e6ad6}</Project>
+      <Name>BEL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,17 +11,62 @@ using System.Windows.Forms;
 
 namespace ClassLibrary1
 {
-    public class DataAccess 
+    public class DbConnection 
     {
+        //public DbConnection()
+        //{
+            
+        //}
+
+        public SqlConnection con = new SqlConnection("data source=MYLAPTOP\\SQLEXPRESS12;initial catalog=textBoxValidationTest;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
+
+        public SqlConnection getcon()
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            return con;
+        }
+
+        public int ExeNonQuery(SqlCommand cmd)
+        {
+            cmd.Connection = getcon();
+            int rowsaffected = -1;
+            rowsaffected = cmd.ExecuteNonQuery();
+            con.Close();
+            return rowsaffected;
+        }
+
+        public object ExeScalar(SqlCommand cmd)
+        {
+            cmd.Connection = getcon();
+            object obj = -1;
+            obj = cmd.ExecuteScalar();
+            con.Close();
+            return obj;
+        }
+
+        public DataTable ExeReader(SqlCommand cmd)
+        {
+            cmd.Connection = getcon();
+            SqlDataReader sdr;
+            DataTable dt = new DataTable();
+
+            sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+            return dt;
+        }
         //    public static DBEntities db;
         //    //static Form1 f = new Form1();
         //    public static tblTest model = new tblTest();
         //    public static string con ="data source=MYLAPTOP\\SQLEXPRESS12;initial catalog=textBoxValidationTest;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
 
-        public DataAccess(Object o)
-        {
+        //public DbConnection(Object o)
+        //{
             
-        }
+        //}
 
         //    public static bool LoginCheck(Object f)
         //    {

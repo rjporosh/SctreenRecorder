@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
 using System.Configuration;
+using DataAccessLayer;
+using LinkAccessLayer;
+using static LinkAccessLayer.Information;
 
 namespace textBoxValidationTest
 {
@@ -17,7 +20,10 @@ namespace textBoxValidationTest
     {
         private DBEntities db;
         private tblTest t = new tblTest();
-        string con ="data source=MYLAPTOP\\SQLEXPRESS12;initial catalog=textBoxValidationTest;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+        public Information info = new Information();
+        public Operations opr = new Operations();
+        public static DbConnection c= new DbConnection();
+        private SqlConnection con = c.con;
         public TestRegioster()
         {
             InitializeComponent();
@@ -69,10 +75,10 @@ namespace textBoxValidationTest
         {
             if (isNotEmpty() && isAvailable())
             {
-                t.FullName = txtFullName.Text;
-                t.UserName = txtUserName.Text;
-                t.Password = txtPassword.Text;
-                t.Type = txtType.Text;
+                t.FullName = info.FullName = txtFullName.Text;
+                t.UserName =info.UserName = txtUserName.Text;
+                t.Password =info.Password = txtPassword.Text;
+                t.Type=info.Type = txtType.Text;
                 using (db = new DBEntities())
                 {
                     db.tblTests.Add(t);
